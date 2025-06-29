@@ -131,10 +131,9 @@
 
           if (!response.ok) throw new Error(await response.text());
 
-          const msg = await response.text();
-          statusBox.classList.remove("bg-yellow-100", "text-yellow-800");
-          statusBox.classList.add("bg-green-100", "text-green-800");
-          statusBox.textContent = msg;
+          // Sucesso: redireciona para a página da VM
+          window.location.href = "http://20.14.75.209:8080";
+
         } catch (err) {
           statusBox.classList.remove("bg-yellow-100", "text-yellow-800");
           statusBox.classList.add("bg-red-100", "text-red-800");
